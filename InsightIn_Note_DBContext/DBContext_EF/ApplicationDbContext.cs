@@ -19,5 +19,6 @@ namespace InsightIn_Note_DBContext.DBContext_EF
         public virtual DbSet<UserAccount> UserAccounts { get; set; }
         public virtual DbSet<OTPService> OTPServices { get; set; }
         public virtual DbSet<NoteCat> NoteCategories { get; set; }
+        public virtual DbSet<Note> Notes { get; set; }
     }
 }

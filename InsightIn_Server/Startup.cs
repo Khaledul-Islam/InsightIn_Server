@@ -62,6 +62,10 @@ namespace InsightIn_Server
             services.AddTransient<IAccountRepository, AccountRepository>();
             services.AddTransient<INoteCategoryService, NoteCategoryService>();
             services.AddTransient<INoteCategoryRepository, NoteCategoryRepository>();
+            services.AddTransient<INoteService, NoteService>();
+            services.AddTransient<INoteRepository, NoteRepository>();
+            services.AddTransient<IReportService, ReportService>();
+            services.AddTransient<IReportRepository, ReportRepository>();
             services.Configure<EmailOptions>(options =>
             {
                 options.ApiKey = Configuration["ExternalProviders:SendGrid:ApiKey"];

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace InsightIn_Note_Model.Note
 {
-    public class Notes
+    public class Note
     {
         [Key]
         public int NoteID { get; set; }
@@ -22,14 +22,15 @@ namespace InsightIn_Note_Model.Note
         [MaxLength(100)]
         [Required]
         public string NoteDescription { get; set; }
-
-        [DataType(DataType.DateTime)]
-        public DateTime Reminder { get; set; }
-        [DataType(DataType.DateTime)]
-        public DateTime CreateDate { get; set; }
-
-        [DataType(DataType.DateTime)]
-        public DateTime DueDate { get; set; }
+        public DateTime? Reminder { get; set; }
+        public DateTime? CreateDate { get; set; }
+        public DateTime? DueDate { get; set; }
         public bool IsCompleted { get; set; }
+        [NotMapped]
+        public string UserName { get; set; }
+        [NotMapped]
+        public string Email { get; set; }
+        [NotMapped]
+        public string Category_Name { get; set; }
     }
 }
