@@ -143,6 +143,11 @@ namespace InsightIn_Note_Repository.Repository
                         _db.OTPServices.Add(oTPService);
                         _db.SaveChanges();
                     }
+                    else
+                    {
+                        errMsg = "NO user found";
+                        return false;
+                    }
                 }
                 else
                 {
