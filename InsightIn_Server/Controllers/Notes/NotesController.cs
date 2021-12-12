@@ -43,10 +43,6 @@ namespace InsightIn_Server.Controllers.Notes
                 return BadRequest("Invalid Request");
             }
             var response = _service.UpdateNote(notes, out string errMsg);
-            if (!string.IsNullOrEmpty(errMsg))
-            {
-                return BadRequest(errMsg);
-            }
             return NoContent();
             //return CreatedAtRoute(notes, response);
         }
